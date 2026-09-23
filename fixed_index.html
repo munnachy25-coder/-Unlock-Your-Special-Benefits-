@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unlock Your Special Benefits</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:12px;background:#fff;font-family:Arial,sans-serif;text-align:center}
+.page{max-width:700px;margin:auto}.hero-wrap{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 6px 25px #0002}
+.hero{display:block;width:100%;height:auto}.overlay{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);width:70%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.timer{padding:9px 20px;border-radius:12px;background:#000c;color:#fff;font-size:25px;font-weight:bold}
+.continue{width:100%;max-width:330px;padding:15px 20px;border-radius:12px;background:#18a94a;color:#fff;font-size:22px;font-weight:bold;text-decoration:none;opacity:.55;cursor:not-allowed}
+.continue.ready{opacity:1;cursor:pointer;animation:pulse 1.1s infinite}
+.note{margin-top:10px;color:#666;font-size:13px}@keyframes pulse{50%{transform:scale(1.04)}}
+@media(max-width:480px){.overlay{width:78%;bottom:5%;gap:7px}.timer{font-size:19px;padding:7px 14px}.continue{font-size:18px;padding:11px 15px}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero-wrap">
+<img class="hero" src="Pic.png" alt="Unlock Your Special Benefits">
+<div class="overlay"><div class="timer" id="timer">10</div><a class="continue" id="continueBtn" href="#">Continue</a></div>
+</div>
+<div class="note">Please wait for the countdown to finish.</div>
+</div>
+<script>
+const targetUrl="https://www.profitableratecpmnetwork.com/gghx0di8gn?key=8bbfe0a27ad69555f8e3ac617c816fb7";
+const timer=document.getElementById("timer"),btn=document.getElementById("continueBtn");
+let seconds=10;
+const countdown=setInterval(()=>{seconds--;timer.textContent=seconds;if(seconds<=0){clearInterval(countdown);timer.textContent="✓ Ready";btn.href=targetUrl;btn.classList.add("ready");}},1000);
+btn.addEventListener("click",e=>{if(!btn.classList.contains("ready"))e.preventDefault();});
+</script>
+</body>
+</html>
